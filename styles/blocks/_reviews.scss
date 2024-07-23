@@ -7,15 +7,16 @@
   color: var(--color-light);
   background-color: var(--color-dark);
   border-radius: var(--border-radius-large);
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include tablet {
-    padding: 25px 25px 40px;
-    row-gap: 46px;
+    padding: 28px 28px 40px;
+    row-gap: 35px;
   }
 
   &__slider {
     --reviewsSliderSlideWidth: 606px;
+
 
     @include tablet {
       --reviewsSliderSlideWidth: 330px;
@@ -23,26 +24,8 @@
     @include mobile {
       --reviewsSliderSlideWidth: 100%;
     }
-    &-list {
-      display: flex;
-      column-gap: 50px;
-      scroll-snap-type: x mandatory;
-      overflow-x: scroll;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      @include tablet-above {
-        margin-left: calc(var(--reviewsSliderSlideWidth) / 2 * -1);
-      }
-      @include tablet {
-        column-gap: 30px;
-      }
-    }
     &-item {
       min-width: var(--reviewsSliderSlideWidth);
-      scroll-snap-align: start;
     }
   }
 
@@ -65,11 +48,6 @@
 
     @include hover {
       color: var(--color-accent);
-    }
-
-    &[disabled] {
-      color: var(--color-gray-alt);
-      cursor: not-allowed;
     }
 
     svg {

@@ -4,9 +4,11 @@
   }
 
   &__button {
+    --paginationButtonSize: 24px;
+
     @include reset-button;
     @include flex-center;
-    @include square(24px);
+    @include square(var(--paginationButtonSize));
 
     color: var(--color-light);
 
@@ -16,6 +18,19 @@
 
     &.is-current {
       color: var(--color-accent);
+    }
+
+    &.swiper-pagination-bullet {
+      @include flex-center;
+      margin: 0;
+      opacity: 1;
+      background: none;
+      width: var(--paginationButtonSize);
+      height: var(--paginationButtonSize);
+
+      &.swiper-pagination-bullet-active {
+        color: var(--color-accent);
+      }
     }
   }
 }
