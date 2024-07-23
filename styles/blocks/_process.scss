@@ -1,0 +1,119 @@
+.process {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+
+    counter-reset: custom-counter;
+    list-style: none;
+  }
+  &__item {
+    --counterContent: counter(custom-counter);
+    counter-increment: custom-counter;
+
+    &:nth-child(-n + 9) {
+      --counterContent: "0" counter(custom-counter);
+    }
+  }
+
+  &__accordion {
+    --indicatorVerticalRotate: 90deg;
+    --indicatorVerticalOpacity: 1;
+
+    & summary::-webkit-details-marker {
+      display: none;
+    }
+
+    padding: 40px 60px;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+    border: var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition-duration);
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    @include mobile {
+      padding: 30px;
+    }
+
+    &[open] {
+      background-color: var(--color-accent);
+
+      --indicatorVerticalRotate: 0deg;
+      --indicatorVerticalOpacity: 0.7;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 50px;
+      cursor: pointer;
+      user-select: none;
+
+      @include mobile {
+        column-gap: 25px;
+      }
+    }
+    &-title {
+      @include fluid-text(30, 18);
+
+      display: flex;
+      align-items: center;
+      column-gap: 25px;
+
+      @include mobile {
+        column-gap: 30px;
+      }
+      &::before {
+        content: var(--counterContent);
+        font-size: 2em;
+
+        @include mobile {
+          font-size: 28px;
+        }
+      }
+    }
+    &-indicator {
+      @include flex-center;
+      @include square(58px);
+
+      position: relative;
+      flex-shrink: 0;
+      background-color: var(--color-gray);
+      border-radius: 50%;
+      border: var(--border);
+
+      &::before,
+      &::after {
+        @include abs-center;
+
+        content: "";
+        width: 45%;
+        height: 10%;
+        background-color: var(--color-dark);
+        transition: var(--transition-duration);
+      }
+
+      &::after {
+        rotate: var(--indicatorVerticalRotate);
+        opacity: var(--indicatorVerticalOpacity);
+      }
+
+      @include mobile {
+        width: 28px;
+      }
+    }
+    &-body {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: var(--border);
+    }
+  }
+}

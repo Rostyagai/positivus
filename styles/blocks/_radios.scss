@@ -1,0 +1,8 @@
+.radios {
+  display: flex;
+  column-gap: 30px;
+
+  @include mobile{
+    justify-content: center;
+  }
+}
