@@ -9,7 +9,10 @@
       user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"
     />
 
-    <meta name="description" content="Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.">
+    <meta
+      name="description"
+      content="Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation."
+    />
 
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./libs/swiper-bundle.min.css" />
@@ -18,7 +21,7 @@
   <body>
     <header class="header">
       <div class="header__inner container">
-        <a class="header__logo logo" href="/">
+        <a class="header__logo logo" href="#hero">
           <img
             class="logo__image"
             src="./images/logo.svg"
@@ -30,28 +33,29 @@
         <nav class="header__menu hidden-mobile">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">About us</a>
+              <a class="header__menu-link" href="#services">Services</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">Services</a>
+              <a class="header__menu-link" href="#studies">Studies</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">Use Cases</a>
+              <a class="header__menu-link" href="#process">Process</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">Pricing</a>
+              <a class="header__menu-link" href="#team">Team</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">Blog</a>
+              <a class="header__menu-link" href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
-        <button
+        <a
           class="header__button button button--transparent hidden-mobile"
           type="button"
+          href="#contact"
         >
           Request a quote
-        </button>
+        </a>
         <button
           class="header__burger-button burger-button visible-mobile"
           onclick="mobileOverlay.showModal()"
@@ -63,7 +67,7 @@
     </header>
 
     <main class="content">
-      <section class="section section--hidden-x">
+      <section class="section section--hidden-x" id="hero">
         <div class="container">
           <div class="section__body">
             <div class="hero">
@@ -156,7 +160,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="services">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title puddle-bg">Services</h2>
@@ -453,7 +457,7 @@
         </div>
       </section>
 
-      <section class="section section--hidden-x">
+      <section class="section section--hidden-x" id="studies">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title puddle-bg">Case Studies</h2>
@@ -477,7 +481,6 @@
                   </div>
                   <a class="studies__link" href="/" target="_blank">
                     <span>PPC Campaign</span>
-                    
 
                     <svg
                       width="21"
@@ -503,8 +506,6 @@
                   </div>
                   <a class="studies__link" href="/" target="_blank">
                     <span>SEO Strategy</span>
-                    
-                    
 
                     <svg
                       width="21"
@@ -530,7 +531,6 @@
                   </div>
                   <a class="studies__link" href="/" target="_blank">
                     <span>SMM Campaign</span>
-                    
 
                     <svg
                       width="21"
@@ -552,7 +552,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="process">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title puddle-bg">Our Working Process</h2>
@@ -682,7 +682,7 @@
         </div>
       </section>
 
-      <section class="section section--hidden-x">
+      <section class="section section--hidden-x" id="team">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title puddle-bg">Team</h2>
@@ -975,7 +975,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="reviews">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title puddle-bg">Testemonials</h2>
@@ -1139,7 +1139,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="contact">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title puddle-bg">Contact Us</h2>
@@ -1224,7 +1224,7 @@
     <footer class="footer container">
       <div class="footer__inner">
         <div class="footer__navigation">
-          <a class="footer__logo logo" href="/">
+          <a class="footer__logo logo" href="#">
             <img
               class="logo__image"
               src="./images/logo-light.svg"
@@ -1237,26 +1237,30 @@
           <nav class="footer__menu">
             <ul class="footer__menu-list">
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">About us</a>
+                <a class="footer__menu-link" href="#services">Services</a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">Services</a>
+                <a class="footer__menu-link" href="#studies">Studies</a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">Use Cases</a>
+                <a class="footer__menu-link" href="#process">Process</a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">Pricing</a>
+                <a class="footer__menu-link" href="#team">Team</a>
               </li>
               <li class="footer__menu-item">
-                <a class="footer__menu-link" href="/">Blog</a>
+                <a class="footer__menu-link" href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
           <div class="footer__soc1als soc1als">
             <ul class="soc1als__list">
               <li class="soc1als__item">
-                <a class="soc1als__link" href="/">
+                <a
+                  class="soc1als__link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                >
                   <span class="visually-hidden">LinkedIn</span>
                   <svg
                     width="17"
@@ -1281,7 +1285,11 @@
                 </a>
               </li>
               <li class="soc1als__item">
-                <a class="soc1als__link" href="/">
+                <a
+                  class="soc1als__link"
+                  href="https://facebook.com"
+                  target="_blank"
+                >
                   <span class="visually-hidden">Facebook</span>
                   <svg
                     fill="#191a23"
@@ -1298,7 +1306,11 @@
                 </a>
               </li>
               <li class="soc1als__item">
-                <a class="soc1als__link" href="/">
+                <a
+                  class="soc1als__link"
+                  href="https://twitter.com"
+                  target="_blank"
+                >
                   <span class="visually-hidden">Twitter</span>
                   <svg
                     width="18"
@@ -1374,19 +1386,19 @@
       <div class="mobile-overlay__body">
         <ul class="mobile-overlay__list">
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link" href="/">About us</a>
+            <a class="mobile-overlay__link" href="#services">Services</a>
           </li>
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link" href="/">Services</a>
+            <a class="mobile-overlay__link" href="#studies">Studies</a>
           </li>
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link" href="/">Use Cases</a>
+            <a class="mobile-overlay__link" href="#process">Process</a>
           </li>
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link" href="/">Pricing</a>
+            <a class="mobile-overlay__link" href="#team">Our Team</a>
           </li>
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link" href="/">Blog</a>
+            <a class="mobile-overlay__link" href="#contact">Contact us</a>
           </li>
         </ul>
       </div>
