@@ -1,4 +1,4 @@
-// Grouping similar animations together
+
 ScrollReveal().reveal(
   "h1, h2, h3, .header__menu-item, .logo__image, .banner, .studies__list, .team__item",
   {
